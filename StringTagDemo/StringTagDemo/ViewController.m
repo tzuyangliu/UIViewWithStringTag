@@ -25,9 +25,9 @@
     bView.tagString = @"bView";
     [self.view addSubview:aView];
     [aView addSubview:bView];
-    
+
     UIView *targetView = [self.view viewWithStringTag:@"bView"];
-    
+
     NSLog(@"%@", targetView);
     // <UIView: 0x7f933bc21e50; frame = (0 0; 100 100); layer = <CALayer: 0x7f933bc1c430>>
 }

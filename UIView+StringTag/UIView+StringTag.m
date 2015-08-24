@@ -12,26 +12,24 @@ static const void *tagKey = &tagKey;
 
 @implementation UIView (StringTag)
 
-- (void)setTagString:(NSString *)tagString
-{
-    objc_setAssociatedObject(self, tagKey, tagString,OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)setTagString:(NSString *)tagString {
+    objc_setAssociatedObject(self, tagKey, tagString, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (id)tagString
-{
+- (id)tagString {
     return objc_getAssociatedObject(self, tagKey);
 }
 
-- (UIView *)viewWithStringTag:(NSString *)strTag{
-    if ([self.tagString isEqual:strTag]){
+- (UIView *)viewWithStringTag:(NSString *)strTag {
+    if ([self.tagString isEqual:strTag]) {
         return self;
     }
-    if (!self.subviews.count){
+    if (!self.subviews.count) {
         return nil;
     }
-    for (UIView *subview in self.subviews){
+    for (UIView *subview in self.subviews) {
         UIView *targetView = [subview viewWithStringTag:strTag];
-        if (targetView){
+        if (targetView) {
             return targetView;
         }
     }

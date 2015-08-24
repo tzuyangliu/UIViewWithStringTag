@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (StringTag)
-@property (nonatomic, copy) NSString *tagString;
+@property(nonatomic, copy) NSString *tagString;
 
 - (UIView *)viewWithStringTag:(NSString *)strTag;
 
