@@ -1,5 +1,5 @@
 # UIViewWithStringTag
-UIView 框架默认只支持数字 Tag，这个扩展是为了满足使用 NSString 作为 Tag 的需求。
+UIView in UIKit only supports number tag. This category give UIView string tag support.
 
 # Usage
 ```
