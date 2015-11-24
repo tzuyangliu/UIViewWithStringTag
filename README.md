@@ -4,7 +4,10 @@ UIView in UIKit only supports number tag. This category give UIView string tag s
 Based on associated object of Objective-C.
 
 # Usage
+```bash
+pod 'UIViewWithStringTag'
 ```
+```objective-c
 // Import header
 #import "UIView+StringTag.h"
 
